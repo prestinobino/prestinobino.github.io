@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Loader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+        }
+        iframe {
+            margin-top: 20px;
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Website Loader</h1>
+    <input type="text" id="urlInput" placeholder="Enter website URL (e.g., https://example.com)">
+    <button onclick="loadWebsite()">Load Website</button>
 
+    <iframe id="webFrame" src=""></iframe>
+
+    <script>
+        function loadWebsite() {
+            let url = document.getElementById("urlInput").value;
+            // Add protocol if missing
+            if (!url.startsWith("http://") && !url.startsWith("https://")) {
+                url = "https://" + url;
+            }
+            document.getElementById("webFrame").src = url;
+        }
+    </script>
+</body>
+</html>
