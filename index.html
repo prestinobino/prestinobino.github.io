@@ -29,14 +29,15 @@
 
     <script>
         function loadWebsite() {
-            let url = document.getElementById("urlInput").value;
-            // Add protocol if missing
-            if (!url.startsWith("http://") && !url.startsWith("https://")) {
-                url = "https://" + url;
-            }
-            const proxyBase = "https://https://replit.com/@witzelpreston75/iframe-proxy-server/proxy?url=";
-            document.getElementById("webFrame").src = proxyBase + encodeURIComponent(url);
-        }
+    let url = document.getElementById("urlInput").value;
+    // Add protocol if missing
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+        url = "https://" + url;
+    }
+    const proxyBase = "https://iframe-proxy-server--witzelpreston75.repl.co/proxy?url=";
+    document.getElementById("webFrame").src = proxyBase + encodeURIComponent(url);
+}
+
     </script>
 </body>
 </html>
